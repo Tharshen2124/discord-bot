@@ -1,5 +1,6 @@
 import discord
 import datetime
+import config
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -34,4 +35,4 @@ async def on_message(message):
         if reaction.count > 1 and reaction.emoji == "👍":
             await message.channel.send('SHEESHHHH we got a lot of people')
 
-client.run('MTA5MTY2OTA3MjA1NzQ4NzQxMQ.G49IUX.kDWfQxERhPdCB3Ksql7x1W89hPXZbe62aAmGEs')
+client.run(config.TOKEN)
